@@ -255,7 +255,8 @@ if ! echo "server {
   server_name $newdomain;
   root /var/www/$newdomain/;
   index index.php index.html index.htm index.nginx-debian.html;
-
+  client_max_body_size 40M;
+  
   location / {
     try_files "'$uri'" "'$uri'"/ /index.php;
   }
