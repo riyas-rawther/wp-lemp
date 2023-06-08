@@ -45,7 +45,8 @@ sudo chown www-data:www-data /var/www/ -R
 
 #Install PHP7.4 and common PHP packages
 echo "Install PHP 7.4"
-
+sudo apt install -y software-properties-common ca-certificates lsb-release apt-transport-https 
+LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt install -y php7.4 php7.4-fpm php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline php7.4-mbstring php7.4-xml php7.4-gd php7.4-curl
 
 
