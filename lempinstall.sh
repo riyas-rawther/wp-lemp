@@ -24,8 +24,8 @@ ufw --force enable
 
 #Set up MariaDB repositories
 
-apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://mirror.netinch.com/pub/mariadb/repo/10.4/ubuntu focal main'
+apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' 
+add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.its.dal.ca/mariadb/repo/10.4 focal main' #Replced repo. THis one is broken, Doesn't load. http://mirror.netinch.com/pub/mariadb/repo/10.4/ubuntu
 
 #Install base packages
 apt-get update; apt-get install -y build-essential curl nano wget lftp unzip bzip2 arj nomarch lzop htop openssl gcc git binutils libmcrypt4 libpcre3-dev make python3 python3-pip supervisor unattended-upgrades whois zsh imagemagick uuid-runtime net-tools
